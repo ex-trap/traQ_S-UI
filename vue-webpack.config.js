@@ -7,7 +7,12 @@ const { DEV_SERVER_PROXY_HOST } = require('./dev.config')
 module.exports = {
   context: __dirname,
   module: {
-    rules: []
+    rules: [
+      {
+        test: /\.worklet\.ts$/,
+        loader: 'worklet-loader'
+      }
+    ]
   },
   plugins:
     process.env.NODE_ENV === 'production'

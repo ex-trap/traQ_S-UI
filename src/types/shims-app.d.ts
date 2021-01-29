@@ -58,3 +58,8 @@ declare module '*.svg?component' {
   const content: Component
   export default content
 }
+
+declare module '*.worklet.ts' {
+  const path: string
+  export default path
+}
